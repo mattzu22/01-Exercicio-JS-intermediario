@@ -1,0 +1,56 @@
+/* .carrossel{
+    position: relative;
+} */
+
+.carrossel .seta.esquerda, .seta.direita {
+   position: absolute; 
+}
+
+.carrossel .seta.esquerda {
+    bottom: 50%;
+}
+
+.carrossel .seta.direita {
+    bottom: 50%;
+    right: 0;
+}
+
+.carrossel .slider .info{
+    background-color: white;
+    /* max-width: 620px; */
+    padding: 65px 60px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 195px;
+    left: 180px;
+}
+
+.carrossel .slider .info .title{
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.carrossel .slider .info p{
+    font-size: 25px;
+    margin-bottom: 50px;
+    width: 500px;
+}
+
+.carrossel .slider .info .link{
+    font-size: 30px;
+}
+
+.slider.aberto{
+    display: block;
+}
+
+.slider{
+    display: none;
+}
+
+
+
+
+
+
+
