@@ -1,6 +1,16 @@
-/* .carrossel{
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.carrossel{
     position: relative;
-} */
+}
 
 .carrossel .seta.esquerda, .seta.direita {
    position: absolute; 
@@ -8,36 +18,89 @@
 
 .carrossel .seta.esquerda {
     bottom: 50%;
+    margin-left: 70px;
 }
 
 .carrossel .seta.direita {
     bottom: 50%;
     right: 0;
+    margin-right: 70px;
+}
+
+.carrossel .slider.rosas::before{
+    content: '';
+    background: url(../images/rosas.png) no-repeat center;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: block;
+}
+
+.carrossel .slider.flores::before{
+    content: '';
+    background: url(../images/flores.png) no-repeat center;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: block;
+}
+
+.carrossel .slider.montanha::before{
+    content: '';
+    background: url(../images/montanhas.png) no-repeat center;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: block;
+}
+
+.carrossel .slider.lago::before{
+    content: '';
+    background: url(../images/lagos.png) no-repeat center;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: block;
 }
 
 .carrossel .slider .info{
     background-color: white;
-    /* max-width: 620px; */
+    max-width: 620px;
     padding: 65px 60px;
     border-radius: 10px;
     position: absolute;
-    bottom: 195px;
+    bottom: 150px;
     left: 180px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .carrossel .slider .info .title{
-    font-size: 50px;
+    font-size: 5rem;
+    font-weight: 400;
     margin-bottom: 80px;
 }
 
 .carrossel .slider .info p{
-    font-size: 25px;
+    font-size: 2.5rem;
     margin-bottom: 50px;
-    width: 500px;
+    line-height: 3.5rem;
 }
 
 .carrossel .slider .info .link{
-    font-size: 30px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.carrossel .slider .info .link.vermelho{
+    color: #C50000;
+}
+
+.carrossel .slider .info .link.amarelo{
+    color: #D9DD10;
+}
+
+.carrossel .slider .info .link.marrom{
+    color: #A63A17;
+}
+
+.carrossel .slider .info .link.azul{
+    color: #10ACDD;
 }
 
 .slider.aberto{
@@ -47,6 +110,12 @@
 .slider{
     display: none;
 }
+
+.desabilitar-seta{
+    pointer-events: none;
+    opacity: 0.6;
+}
+
 
 
 

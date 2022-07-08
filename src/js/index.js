@@ -1,68 +1,89 @@
-/*  primeiro capturar as setas no html 
-    depois capturar os slider
-    quando clicar na seta direita tirar a class aberto e colocar no próximo 
-*/
-// function moverParaEsquerda(){
-//     contador--
-//     if(contador <= sliders.length){
-//         return stop;
-//     }
 
-//     let sliderAtual = sliders[contador]
-//     sliderAberto.classList.remove('aberto')
-//     sliderAtual.classList.add('aberto')
-
-// }
-
-
-// function moverParaDireita(){
-//     contador++
-//     if(contador >= sliders.length){
-//         return;
-//     }
-
-//     let sliderAtual = sliders[contador]
-
-//     sliderAberto.classList.remove('aberto')
-//     sliderAtual.classList.add('aberto')
-//     console.log(sliderAtual);
-    
-// }
-
-
-
-const sliders = document.querySelectorAll('.slider')
-const tamanhoSliders = sliders.length
-
-const sliderAberto = document.querySelector('.aberto')
+const sliders = document.getElementsByClassName('slider')
+let sliderAberto = document.querySelector('.aberto')
 let contador = 0
+const setaDireita = document.getElementById('direita')
+const setaEsquerda = document.getElementById('esquerda')
 
 
-document.getElementById('direita').addEventListener('click', () => {
+setaDireita.addEventListener('click', () => {
+    
     contador++
-    if(contador >= tamanhoSliders){
-        return;
-    }
-    console.log(contador)
-
-    let sliderAtual = sliders[contador]
-
+   
+    const sliderAtual = sliders[contador]
+    
     sliderAberto.classList.remove('aberto')
+    sliderAberto = sliderAtual
+
     sliderAtual.classList.add('aberto')
+
+    condicoesDasSetas()
+
 })
 
-document.getElementById('esquerda').addEventListener('click', () => {
+setaEsquerda.addEventListener('click', () => {
+
     contador--
-    if(tamanhoSliders <= contador){
-        return;
-    }
-    console.log(contador)
-
-    let sliderAtual = sliders[contador]
+  
+    const sliderAtual = sliders[contador]
 
     sliderAberto.classList.remove('aberto')
+    sliderAberto = sliderAtual
+
     sliderAtual.classList.add('aberto')
+
+    condicoesDasSetas()
+
 })
 
+
+function condicoesDasSetas(){
+    if(contador <= 0){
+        setaEsquerda.classList.add('desabilitar-seta')
+    }else{
+        setaEsquerda.classList.remove('desabilitar-seta')
+    }
+    if(contador >= 3){
+        setaDireita.classList.add('desabilitar-seta')
+    }else{
+        setaDireita.classList.remove('desabilitar-seta')
+    }
+}
+
+
     
+
+
+
+//ideia
+// document.querySelectorAll(".seta").forEach(seta => {
+
+//     seta.addEventListener('click', () => {
+        
+        
+//         const setaDireita = document.getElementById('direita')
+//         const setaEsquerda = document.getElementById('esquerda')
+        
+//         if(contador <= 0){
+//             setaEsquerda.classList.add('desabilitar-seta')
+//         }else{
+//             setaEsquerda.classList.remove('desabilitar-seta')
+//             contador--
+//         }
+
+//         contador++
+//         if(contador >= 3){
+//             setaDireita.classList.add('desabilitar-seta')
+//         }else{
+//             setaDireita.classList.remove('desabilitar-seta')
+//         }
+
     
+//         const sliderAtual = sliders[contador]
+        
+//         sliderAberto.classList.remove('aberto')
+//         sliderAberto = sliderAtual
+    
+//         sliderAtual.classList.add('aberto')
+//     })
+// })

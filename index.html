@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício JS intermediário</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
@@ -14,14 +19,11 @@
 <body>
     <section class="carrossel">
 
-        <a href="#" class="seta esquerda">
-            <img id="esquerda" src="src/images/seta esquerda.png" alt="imagem de uma seta">
+        <a href="#" class="seta esquerda desabilitar-seta" id="esquerda">
+            <img src="src/images/seta esquerda.png" alt="imagem de uma seta">
         </a>
 
-        <div class="slider aberto">
-
-            <div class="container">
-                <img src="src/images/rosas.png" alt="rosas">
+        <div class="slider rosas aberto">
 
                 <div class="info">
                     <h1 class="title">Titulo imagem 1</h1>
@@ -34,16 +36,12 @@
                         interdum in, semper in ante. Suspendisse dolor urna, volutpat a e
                     </p>
 
-                    <a class="link" href="#">Saiba mais</a>
+                    <a class="link vermelho" href="#">Saiba mais</a>
                 </div>
-            </div>
 
         </div>
 
-        <div class="slider">
-
-            <div class="container">
-                <img src="src/images/flores.png" alt="flores">
+        <div class="slider flores">
 
                 <div class="info">
                     <h1 class="title">Titulo imagem 2</h1>
@@ -56,16 +54,14 @@
                         interdum in, semper in ante. Suspendisse dolor urna, volutpat a e
                     </p>
 
-                    <a class="link" href="#">Saiba mais</a>
+                    <a class="link amarelo" href="#">Saiba mais</a>
                 </div>
-            </div>
-
+        
         </div>
 
-        <div class="slider">
+        <div class="slider montanha">
 
             <div class="container">
-                <img src="src/images/montanhas.png" alt="rosas">
 
                 <div class="info">
                     <h1 class="title">Titulo imagem 3</h1>
@@ -78,16 +74,15 @@
                         interdum in, semper in ante. Suspendisse dolor urna, volutpat a e
                     </p>
 
-                    <a class="link" href="#">Saiba mais</a>
+                    <a class="link marrom" href="#">Saiba mais</a>
                 </div>
             </div>
 
         </div>
 
-        <div class="slider">
-            
+        <div class="slider lago">
+
             <div class="container">
-                <img src="src/images/lagos.png" alt="rosas">
 
                 <div class="info">
                     <h1 class="title">Titulo imagem 4</h1>
@@ -100,14 +95,14 @@
                         interdum in, semper in ante. Suspendisse dolor urna, volutpat a e
                     </p>
 
-                    <a class="link" href="#">Saiba mais</a>
+                    <a class="link azul" href="#">Saiba mais</a>
                 </div>
             </div>
 
         </div>
 
-        <a href="#" class="seta direita" >
-            <img id="direita" src="src/images/seta direita.png" alt="imagem de uma seta">
+        <a href="#" class="seta direita" id="direita">
+            <img src="src/images/seta direita.png" alt="imagem de uma seta">
         </a>
 
 
