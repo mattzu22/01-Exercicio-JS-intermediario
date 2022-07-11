@@ -1,0 +1,30 @@
+@media(max-width: 980px){
+    .carrossel .seta.esquerda {
+        margin-left: 10px;
+    }
+    
+    .carrossel .seta.direita {
+        margin-right: 10px;
+    }
+
+    .carrossel .slider .info{
+        max-width: 450px;
+    }
+    
+    .carrossel .slider .info .title{
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    
+    .carrossel .slider .info p{
+        font-size: 2rem;
+        margin-bottom: 30px;
+        line-height: 3rem;
+    }
+    
+    .carrossel .slider .info .link{
+        font-size: 2rem;
+    }
+
+}
+

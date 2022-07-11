@@ -51,39 +51,3 @@ function condicoesDasSetas(){
 }
 
 
-    
-
-
-
-//ideia
-// document.querySelectorAll(".seta").forEach(seta => {
-
-//     seta.addEventListener('click', () => {
-        
-        
-//         const setaDireita = document.getElementById('direita')
-//         const setaEsquerda = document.getElementById('esquerda')
-        
-//         if(contador <= 0){
-//             setaEsquerda.classList.add('desabilitar-seta')
-//         }else{
-//             setaEsquerda.classList.remove('desabilitar-seta')
-//             contador--
-//         }
-
-//         contador++
-//         if(contador >= 3){
-//             setaDireita.classList.add('desabilitar-seta')
-//         }else{
-//             setaDireita.classList.remove('desabilitar-seta')
-//         }
-
-    
-//         const sliderAtual = sliders[contador]
-        
-//         sliderAberto.classList.remove('aberto')
-//         sliderAberto = sliderAtual
-    
-//         sliderAtual.classList.add('aberto')
-//     })
-// })

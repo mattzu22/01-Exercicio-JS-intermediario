@@ -30,7 +30,7 @@ body{
 .carrossel .slider.rosas::before{
     content: '';
     background: url(../images/rosas.png) no-repeat center;
-    max-width: 100vw;
+    max-width: 100%;
     min-height: 100vh;
     display: block;
 }
