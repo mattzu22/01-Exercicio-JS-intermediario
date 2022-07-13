@@ -15,7 +15,7 @@ setaAvancar.addEventListener('click', () => {
 
 setaVoltar.addEventListener('click', () => {
     contador--
-    //já que o codigo estava sendo repetido, seria melhor ter criado uma função
+   
     mostraOuEsconderSlider()
     mostrarOuDesativarSetas()
 })
@@ -36,7 +36,7 @@ function mostrarOuDesativarSetas(){
     }else{
         setaVoltar.classList.remove('desabilitar-seta')
     }
-    //nao usar numerps inteiros como o 3 nesse caso, pq caso seja adicionado outro slider não vai funcionar, pois o codigo não esta reutilizavel
+  
     if(contador >= sliders.length -1){
         setaAvancar.classList.add('desabilitar-seta')
     }else{
