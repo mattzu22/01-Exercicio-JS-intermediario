@@ -2,51 +2,45 @@
 const sliders = document.getElementsByClassName('slider')
 let sliderAberto = document.querySelector('.aberto')
 let contador = 0
-const setaDireita = document.getElementById('direita')
-const setaEsquerda = document.getElementById('esquerda')
+const setaAvancar = document.getElementById('avancar')
+const setaVoltar = document.getElementById('voltar')
+  
 
-
-setaDireita.addEventListener('click', () => {
-    
+setaAvancar.addEventListener('click', () => {   
     contador++
    
-    const sliderAtual = sliders[contador]
-    
-    sliderAberto.classList.remove('aberto')
-    sliderAberto = sliderAtual
-
-    sliderAtual.classList.add('aberto')
-
-    condicoesDasSetas()
-
+    mostraOuEsconderSlider()
+    mostrarOuDesativarSetas()
 })
 
-setaEsquerda.addEventListener('click', () => {
-
+setaVoltar.addEventListener('click', () => {
     contador--
-  
+    //já que o codigo estava sendo repetido, seria melhor ter criado uma função
+    mostraOuEsconderSlider()
+    mostrarOuDesativarSetas()
+})
+
+
+function mostraOuEsconderSlider() {
     const sliderAtual = sliders[contador]
 
     sliderAberto.classList.remove('aberto')
     sliderAberto = sliderAtual
 
     sliderAtual.classList.add('aberto')
+}
 
-    condicoesDasSetas()
-
-})
-
-
-function condicoesDasSetas(){
+function mostrarOuDesativarSetas(){
     if(contador <= 0){
-        setaEsquerda.classList.add('desabilitar-seta')
+        setaVoltar.classList.add('desabilitar-seta')
     }else{
-        setaEsquerda.classList.remove('desabilitar-seta')
+        setaVoltar.classList.remove('desabilitar-seta')
     }
-    if(contador >= 3){
-        setaDireita.classList.add('desabilitar-seta')
+    //nao usar numerps inteiros como o 3 nesse caso, pq caso seja adicionado outro slider não vai funcionar, pois o codigo não esta reutilizavel
+    if(contador >= sliders.length -1){
+        setaAvancar.classList.add('desabilitar-seta')
     }else{
-        setaDireita.classList.remove('desabilitar-seta')
+        setaAvancar.classList.remove('desabilitar-seta')
     }
 }
 

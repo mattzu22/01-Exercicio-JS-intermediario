@@ -10,53 +10,49 @@ body{
 
 .carrossel{
     position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.carrossel .seta.esquerda, .seta.direita {
+.carrossel .slider{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.carrossel .seta.voltar, .seta.avancar {
    position: absolute; 
+   z-index: 1;
+   padding: 20px;
 }
 
-.carrossel .seta.esquerda {
-    bottom: 50%;
-    margin-left: 70px;
-}
-
-.carrossel .seta.direita {
-    bottom: 50%;
+.carrossel .seta.avancar{
     right: 0;
-    margin-right: 70px;
 }
 
-.carrossel .slider.rosas::before{
-    content: '';
-    background: url(../images/rosas.png) no-repeat center;
-    max-width: 100%;
-    min-height: 100vh;
-    display: block;
+.rosas{
+    background-image: url(../images/rosas.png);
 }
 
-.carrossel .slider.flores::before{
-    content: '';
-    background: url(../images/flores.png) no-repeat center;
-    max-width: 100vw;
-    min-height: 100vh;
-    display: block;
+.flores{
+    background-image: url(../images/flores.png);
 }
 
-.carrossel .slider.montanha::before{
-    content: '';
-    background: url(../images/montanhas.png) no-repeat center;
-    max-width: 100vw;
-    min-height: 100vh;
-    display: block;
+.montanha{
+    background-image: url(../images/montanhas.png);
 }
 
-.carrossel .slider.lago::before{
-    content: '';
-    background: url(../images/lagos.png) no-repeat center;
-    max-width: 100vw;
-    min-height: 100vh;
-    display: block;
+.lago{
+    background-image: url(../images/lagos.png) ;
+   
 }
 
 .carrossel .slider .info{
@@ -64,9 +60,7 @@ body{
     max-width: 620px;
     padding: 65px 60px;
     border-radius: 10px;
-    position: absolute;
-    bottom: 150px;
-    left: 180px;
+    margin-left: 180px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
@@ -104,11 +98,7 @@ body{
 }
 
 .slider.aberto{
-    display: block;
-}
-
-.slider{
-    display: none;
+   opacity: 1;
 }
 
 .desabilitar-seta{
